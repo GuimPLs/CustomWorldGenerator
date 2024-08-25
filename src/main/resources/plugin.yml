@@ -1,0 +1,5 @@
+name: CustomWorldGenerator
+main: pl.guimpl.customworldgenerator.CustomWorldGenerator
+version: 1.0
+api-version: 1.20
+description: Plugin do generowania niestandardowych światów.
