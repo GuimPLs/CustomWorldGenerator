@@ -1,0 +1,15 @@
+# Pliki kompilacji
+/target
+/*.jar
+
+# Pliki IDE
+.idea/
+*.iml
+
+# Systemy operacyjne
+*.DS_Store
+*.log
+
+# Pliki tymczasowe
+*.tmp
+*.swp
