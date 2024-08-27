@@ -13,7 +13,6 @@ public class CustomWorldGenerator extends JavaPlugin {
     public void onEnable() {
         Bukkit.getLogger().info("CustomWorldGenerator jest aktywowany!");
 
-        // Automatyczne generowanie nowego świata przy starcie
         createCustomWorld();
     }
 
@@ -23,11 +22,10 @@ public class CustomWorldGenerator extends JavaPlugin {
     }
 
     public void createCustomWorld() {
-        // Tworzenie nowego świata o nazwie "custom_world"
         WorldCreator creator = new WorldCreator("custom_world");
-        creator.environment(World.Environment.NORMAL); // Świat normalny (Overworld)
-        creator.type(WorldType.NORMAL); // Standardowy typ świata
-        creator.generator(new CustomChunkGenerator()); // Ustawienie niestandardowego generatora chunków
+        creator.environment(World.Environment.NORMAL); 
+        creator.type(WorldType.NORMAL); 
+        creator.generator(new CustomChunkGenerator()); 
 
         World world = Bukkit.createWorld(creator);
         if (world != null) {
@@ -37,8 +35,6 @@ public class CustomWorldGenerator extends JavaPlugin {
         }
     }
 
-    // Klasa generatora chunków (na razie prosta)
     public static class CustomChunkGenerator extends ChunkGenerator {
-        // W przyszłości możemy tu dodać niestandardową generację chunków
     }
 }
