@@ -11,7 +11,6 @@ public class CustomChunkGenerator extends ChunkGenerator {
     public ChunkData generateChunkData(World world, Random random, int x, int z, BiomeGrid biome) {
         ChunkData chunkData = createChunkData(world);
 
-        // Generowanie płaskiego terenu z trawy (y=64)
         for (int i = 0; i < 64; i++) {
             chunkData.setRegion(0, i, 0, 16, i + 1, 16, (i == 63) ? Material.GRASS_BLOCK : Material.DIRT);
         }
